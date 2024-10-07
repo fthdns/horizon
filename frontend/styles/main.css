@@ -1,10 +1,10 @@
 body {
   background-color: #fff;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   color: #253839;
 }
 
-nav{
+nav {
   border-bottom-left-radius: 0.375rem;
   border-bottom-right-radius: 0.375rem;
 }
@@ -54,7 +54,7 @@ header p {
 }
 
 header h1 {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-weight: bold;
   font-size: 50px;
 }
@@ -111,7 +111,7 @@ header .btn-get-started:hover {
 }
 
 .section-popular .section-popular-heading h2 {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-weight: bold;
   font-size: 40px;
 }
@@ -159,9 +159,15 @@ header .btn-get-started:hover {
 }
 
 .section-networks h2 {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-weight: bold;
   font-size: 40px;
+}
+
+.section-networks .row {
+  display: flex; /* Mengaktifkan flexbox */
+  justify-content: space-between; /* Menempatkan elemen di ujung kiri dan kanan */
+  align-items: center;
 }
 
 .section-networks p {
@@ -173,14 +179,13 @@ header .btn-get-started:hover {
 }
 
 .section-testimonials-heading {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f7f9ff));
   background: linear-gradient(#fff 0%, #f7f9ff 100%);
   padding-top: 50px;
   min-height: 506px;
 }
 
 .section-testimonials-heading h2 {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-weight: bold;
   font-size: 40px;
 }
@@ -194,14 +199,16 @@ header .btn-get-started:hover {
   padding-bottom: 50px;
 }
 
+.section-testimonials-content .section-popular-travel {
+  display: flex;
+}
+
 .section-testimonials-content .card-testimonial {
   padding: 40px 20px 10px;
   border-radius: 11px;
   margin-bottom: 20px;
-}
-
-.section-testimonials-content .card-testimonial .testimonial-content {
-  min-height: 380px;
+  min-height: 640px;
+  justify-content: space-between;
 }
 
 .section-testimonials-content .card-testimonial h3 {
@@ -219,11 +226,13 @@ header .btn-get-started:hover {
   font-weight: normal;
   font-size: 22px;
   color: #6e6e6e;
+  margin-top: auto;
 }
 
 .section-testimonials-content .card-testimonial hr {
   margin-left: -20px;
   margin-right: -20px;
+  margin-top: auto;
 }
 
 .section-testimonials-content .btn-get-started {
@@ -336,21 +345,19 @@ header .btn-get-started:hover {
   display: block;
 }
 
-.section-details-content .gallery .xzoom-container .xzoom-thumbs .xzoom-gallery{
+.section-details-content .gallery .xzoom-container .xzoom-thumbs .xzoom-gallery {
   border-radius: 0.375rem;
 }
 
 .section-details-content .gallery .xzoom-container .xzoom {
   width: 100%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   margin-bottom: 10px;
 }
 
 .section-details-content .gallery .xzoom-container .xactive {
   border: 2px solid #1abc9c;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .section-details-content .features {
@@ -410,7 +417,7 @@ header .btn-get-started:hover {
 }
 
 .section-details-content .bank .bank-item .description p {
-  font-family: 'Nunito Sans';
+  font-family: "Nunito Sans";
   font-weight: normal;
   font-size: 16px;
   text-align: left;
@@ -474,5 +481,4 @@ header .btn-get-started:hover {
 
 .section-success .btn-home-page:hover {
   color: #fff;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
