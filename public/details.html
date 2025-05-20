@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Horizon</title>
+    <link rel="stylesheet" href="frontend/libraries/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="frontend/libraries/xzoom/dist/xzoom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="frontend/styles/main.css">
+    <link rel="stylesheet" href="frontend/libraries/xzoom/dist/xzoom.css" />
+  </head>
+  <body>
+    <!-- Semantic elements -->
+    <!-- https://www.w3schools.com/html/html5_semantic_elements.asp -->
+
+    <!-- Bootstrap navbar example -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp -->
+
+    <!-- Navbar -->
+    <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light px-3 bg-white">
+              <a href="#" class="navbar-brand">
+                  <img src="frontend/images/logo.png" alt="Logo Horizon">
+              </a>
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navb">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navb">
+                  <ul class="navbar-nav ms-auto me-3">
+                      <li class="nav-item mx-md-2 mx-sm-2">  
+                          <a href="#" class="nav-link active">Home</a>
+                      </li>
+                      <li class="nav-item mx-md-2 mx-sm-2">
+                          <a href="#" class="nav-link">Travel Packages</a>
+                      </li>
+                      <li class="nav-item dropdown mx-md-2 mx-sm-2">
+                          <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-bs-toggle="dropdown">
+                              Services
+                          </a>
+                          <div class="dropdown-menu">
+                              <a href="" class="dropdown-item">Link</a>
+                              <a href="" class="dropdown-item">Link</a>
+                              <a href="" class="dropdown-item">Link</a>
+                          </div>
+                      </li>
+                      <li class="nav-item mx-md-2 mx-sm-2">
+                          <a href="#" class="nav-link">Testimonials</a>
+                      </li>
+                  </ul>
+
+                  <!-- Mobile Button -->
+                  <form action="" class="form-inline d-sm-block d-md-none mx-2 my-2">
+                      <button class="btn btn-login my-2 my-sm-0">
+                          Masuk
+                      </button>
+                  </form>
+
+                  <!-- Tab Button -->
+                  <form action="" class="form-inline d-none d-md-block d-lg-none mx-2 my-2">
+                      <button class="btn btn-login my-2 my-sm-0">
+                          Masuk
+                      </button>
+                  </form>
+
+                  <!-- Desktop Button -->
+                  <form action="" class="form-inline my-2 my-lg-0 d-none d-lg-block">
+                      <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
+                          Masuk
+                      </button>
+                  </form>
+              </div>
+          </nav>
+    </div>
+ 
+    
+    <!-- Details -->
+    <main>
+      <section class="section-details-header"></section>
+      <section class="section-details-content">
+        <div class="container">
+          <div class="row">
+            <div class="col p-0 pl-3 pl-lg-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item" aria-current="page">
+                    Travel Package
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Details
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 pl-lg-0">
+              <div class="card card-details">
+                <h1>Bali</h1>
+                <p>
+                  Indonesia
+                </p>
+                <div class="gallery">
+                  <div class="xzoom-container">
+                    <img
+                      class="xzoom"
+                      id="xzoom-default"
+                      src="frontend/images/pic_featured1.jpg"
+                      xoriginal="frontend/images/pic_featured1.jpg"
+                    />
+                    <div class="xzoom-thumbs">
+                      <a href="frontend/images/pic1.jpg"
+                        ><img
+                          class="xzoom-gallery"
+                          width="119"
+                          src="frontend/images/pic1.jpg"
+                          xpreview="frontend/images/pic_featured1.jpg"
+                      /></a>
+                      <a href="frontend/images/pic2.jpg"
+                        ><img
+                          class="xzoom-gallery"
+                          width="119"
+                          src="frontend/images/pic2.jpg"
+                          xpreview="frontend/images/pic_featured2.jpg"
+                      /></a>
+                      <a href="frontend/images/pic3.jpg"
+                        ><img
+                          class="xzoom-gallery"
+                          width="119"
+                          src="frontend/images/pic3.jpg"
+                          xpreview="frontend/images/pic_featured3.jpg"
+                      /></a>
+                      <a href="frontend/images/pic4.jpg"
+                        ><img
+                          class="xzoom-gallery"
+                          width="119"
+                          src="frontend/images/pic4.jpg"
+                          xpreview="frontend/images/pic_featured4.jpg"
+                      /></a>
+                      <a href="frontend/images/pic5.jpg"
+                        ><img
+                          class="xzoom-gallery"
+                          width="128"
+                          src="frontend/images/pic5.jpg"
+                          xpreview="frontend/images/pic_featured5.jpg"
+                      /></a>
+                    </div>
+                  </div>
+                </div>
+                <h2>About The Place</h2>
+                <p>
+                  Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. East of Java and west of Lombok, the province includes the island of Bali and a  few smaller offshore islands, notably Nusa Penida, Nusa Lembongan, and Nusa Ceningan to the southeast.
+                </p>
+                <p>
+                  Bali and a district of Klungkung Regency that includes the neighbouring small island of Nusa Lembongan. The Badung Strait separates the island and Bali.
+                </p>
+                <div class="features row pt-3">
+                  <div class="col-md-4">
+                    <img
+                      src="frontend/images/ic_event.jpg"
+                      alt=""
+                      class="features-image"
+                    />
+                    <div class="description">
+                      <h3>Featured Ticket</h3>
+                      <p>Tari Kecak</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 border-start">
+                    <img
+                      src="frontend/images/ic_lang.jpg"
+                      alt=""
+                      class="features-image"
+                    />
+                    <div class="description">
+                      <h3>Language</h3>
+                      <p>Bahasa Indonesia</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 border-start">
+                    <img
+                      src="frontend/images/ic_food.jpg"
+                      alt=""
+                      class="features-image"
+                    />
+                    <div class="description">
+                      <h3>Foods</h3>
+                      <p >Local Foods</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-details card-right">
+                <h2>Members are going</h2>
+                <div class="members my-2">
+                  <img src="frontend/images/members.jpg" alt="" class="w-75" />
+                </div>
+                <hr />
+                <h2>Trip Informations</h2>
+                <table class="trip-informations">
+                  <tr>
+                    <th width="50%">Date of Departure</th>
+                    <td width="50%" class="text-end">16 Sep, 2022</td>
+                  </tr>
+                  <tr>
+                    <th width="50%">Duration</th>
+                    <td width="50%" class="text-end">4D 3N</td>
+                  </tr>
+                  <tr>
+                    <th width="50%">Type</th>
+                    <td width="50%" class="text-end">Open Trip</td>
+                  </tr>
+                  <tr>
+                    <th width="50%">Price</th>
+                    <td width="50%" class="text-end">$80,00 / person</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="join-container">
+                <a href="checkout.html" class="btn btn-block btn-join-now  py-2"
+                  >Join Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+   
+    <!-- Footer -->
+    <footer class="section-footer mt-5 mb-4 border-top">
+        <div class="container pt-5 pb-5">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <h5>Features</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Reviews</a></li>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="#">Social Media Kit</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <h5>Account</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Refund</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Rewards</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <h5>Company</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Career</a></li>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Media</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <h5>Get Connected</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Central Jakarta</a></li>
+                                <li><a href="#">Indonesia</a></li>
+                                <li><a href="#">0821 - 727 - 8465</a></li>
+                                <li><a href="#">support@horizon.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-flui">
+            <div class="row border-top justify-content-center align-items-center pt-4">
+                <div class="col-auto text-gray-500 font-weight-light text-center">
+                    2023 Copyright Horizon • All rights reserved • Made with <span class="text-danger">&hearts;</span> in Jakarta
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="frontend/libraries/retina/retina.min.js"></script>
+    <script src="frontend/libraries/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="frontend/libraries/jquery/jquery-3.7.1.min.js"></script>
+    <script src="frontend/libraries/retina/retina.min.js"></script>
+    <script src="frontend/libraries/xzoom/dist/xzoom.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.xzoom, .xzoom-gallery').xzoom({
+          zoomWidth: 500,
+          title: false,
+          tint: '#333',
+          Xoffset: 15
+        });
+      });
+    </script>
+  </body>
+</html>
