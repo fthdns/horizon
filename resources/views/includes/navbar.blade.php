@@ -51,7 +51,7 @@
                 <form action="" class="form-inline my-2 my-lg-0 d-none d-lg-block">
                     <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="button" onclick="event.preventDefault(); location.href='{{ url('login') }}';">
                         Login
-                    </button>
+                    </button> 
                 </form>
                 @endguest
 
