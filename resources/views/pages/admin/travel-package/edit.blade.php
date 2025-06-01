@@ -65,7 +65,7 @@
                     <label for="price">Price</label>
                     <input type="number" class="form-control" name="price" placeholder="Price" value="{{ $item->price }}" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">
+                <button type="submit" class="btn btn-block" style="background-color: #253839; color: white;">
                     Save
                 </button>
             </form>

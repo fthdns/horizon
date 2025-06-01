@@ -38,7 +38,7 @@
                     <label for="image">Image</label>
                     <input type="file" class="form-control" name="image" placeholder="Image" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">
+                <button type="submit" class="btn btn-block" style="background-color: #253839; color: white;">
                     Save
                 </button>
             </form>
