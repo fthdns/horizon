@@ -33,8 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label for="about">About</label>
-                    <textarea class="form-control d-block w-100" name="about" rows="10">{{ old('about') }}
-                    </textarea>
+                    <textarea class="form-control d-block w-100" name="about" rows="10">{{ old('about') }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="featured_event">Featured Event</label>

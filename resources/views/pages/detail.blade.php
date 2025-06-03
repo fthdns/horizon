@@ -25,96 +25,71 @@
           <div class="row">
             <div class="col-lg-8 pl-lg-0">
               <div class="card card-details">
-                <h1>Bali</h1>
+                <h1>{{ $item->title }}</h1>
                 <p>
-                  Indonesia
+                  {{ $item->location }}  
                 </p>
-                <div class="gallery">
-                  <div class="xzoom-container">
-                    <img
-                      class="xzoom"
-                      id="xzoom-default"
-                      src="frontend/images/pic_featured1.jpg"
-                      xoriginal="frontend/images/pic_featured1.jpg"
-                    />
-                    <div class="xzoom-thumbs">
-                      <a href="frontend/images/pic1.jpg"
-                        ><img
-                          class="xzoom-gallery"
-                          width="119"
-                          src="frontend/images/pic1.jpg"
-                          xpreview="frontend/images/pic_featured1.jpg"
-                      /></a>
-                      <a href="frontend/images/pic2.jpg"
-                        ><img
-                          class="xzoom-gallery"
-                          width="119"
-                          src="frontend/images/pic2.jpg"
-                          xpreview="frontend/images/pic_featured2.jpg"
-                      /></a>
-                      <a href="frontend/images/pic3.jpg"
-                        ><img
-                          class="xzoom-gallery"
-                          width="119"
-                          src="frontend/images/pic3.jpg"
-                          xpreview="frontend/images/pic_featured3.jpg"
-                      /></a>
-                      <a href="frontend/images/pic4.jpg"
-                        ><img
-                          class="xzoom-gallery"
-                          width="119"
-                          src="frontend/images/pic4.jpg"
-                          xpreview="frontend/images/pic_featured4.jpg"
-                      /></a>
-                      <a href="frontend/images/pic5.jpg"
-                        ><img
-                          class="xzoom-gallery"
-                          width="128"
-                          src="frontend/images/pic5.jpg"
-                          xpreview="frontend/images/pic_featured5.jpg"
-                      /></a>
+                @if (count($item->galleries))
+                    <div class="gallery">
+                      <div class="xzoom-container">
+                        <img
+                          src="{{ Storage::url($item->galleries->first()->image) }}"
+                          class="xzoom img-fluid"
+                          id="xzoom-default"
+                          xoriginal="{{ Storage::url($item->galleries->first()->image) }}"
+                        />
+                      </div>
+                      <div class="xzoom-thumbs">
+                        @foreach ($item->galleries as $gallery)
+                            <a href="{{ Storage::url($gallery->image) }}">
+                              <img
+                                src="{{ Storage::url($gallery->image) }}"
+                                class="xzoom-gallery"
+                                width="128"
+                                xpreview="{{ Storage::url($gallery->image) }}"
+                              />
+                            </a>
+                        @endforeach
+                      </div>
                     </div>
-                  </div>
-                </div>
+              
+                @endif
                 <h2>About The Place</h2>
                 <p>
-                  Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. East of Java and west of Lombok, the province includes the island of Bali and a  few smaller offshore islands, notably Nusa Penida, Nusa Lembongan, and Nusa Ceningan to the southeast.
-                </p>
-                <p>
-                  Bali and a district of Klungkung Regency that includes the neighbouring small island of Nusa Lembongan. The Badung Strait separates the island and Bali.
+                  {{ $item->about }}
                 </p>
                 <div class="features row pt-3">
                   <div class="col-md-4">
                     <img
-                      src="frontend/images/ic_event.jpg"
+                      src="{{ url('frontend/images/ic_event.jpg') }}"
                       alt=""
                       class="features-image"
                     />
                     <div class="description">
                       <h3>Featured Ticket</h3>
-                      <p>Tari Kecak</p>
+                      <p>{{ $item->featured_event }}</p>
                     </div>
                   </div>
                   <div class="col-md-4 border-start">
                     <img
-                      src="frontend/images/ic_lang.jpg"
+                      src="{{ url('frontend/images/ic_lang.jpg') }}"
                       alt=""
                       class="features-image"
                     />
                     <div class="description">
                       <h3>Language</h3>
-                      <p>Bahasa Indonesia</p>
+                      <p>{{ $item->language }}</p>
                     </div>
                   </div>
                   <div class="col-md-4 border-start">
                     <img
-                      src="frontend/images/ic_food.jpg"
+                      src="{{ url('frontend/images/ic_food.jpg') }}"
                       alt=""
                       class="features-image"
                     />
                     <div class="description">
                       <h3>Foods</h3>
-                      <p >Local Foods</p>
+                      <p>{{ $item->foods }}</p>
                     </div>
                   </div>
                 </div>
@@ -124,33 +99,40 @@
               <div class="card card-details card-right">
                 <h2>Members are going</h2>
                 <div class="members my-2">
-                  <img src="frontend/images/members.jpg" alt="" class="w-75" />
+                  <img src="{{ url('frontend/images/members.jpg') }}" alt="" class="w-75" />
                 </div>
                 <hr />
                 <h2>Trip Informations</h2>
                 <table class="trip-informations">
                   <tr>
                     <th width="50%">Date of Departure</th>
-                    <td width="50%" class="text-end">16 Sep, 2022</td>
+                    <td width="50%" class="text-end">
+                      {{ \Carbon\Carbon::parse($item->departure_date)->format('F j, Y') }}
+                    </td>
                   </tr>
                   <tr>
                     <th width="50%">Duration</th>
-                    <td width="50%" class="text-end">4D 3N</td>
+                    <td width="50%" class="text-end">{{ $item->duration }}</td>
                   </tr>
                   <tr>
                     <th width="50%">Type</th>
-                    <td width="50%" class="text-end">Open Trip</td>
+                    <td width="50%" class="text-end">{{ $item->type }}</td>
                   </tr>
                   <tr>
                     <th width="50%">Price</th>
-                    <td width="50%" class="text-end">$80,00 / person</td>
+                    <td width="50%" class="text-end">${{ $item->price }},00 / person</td>
                   </tr>
                 </table>
               </div>
               <div class="join-container">
-                <a href="{{ route('checkout') }}" class="btn btn-block btn-join-now  py-2"
-                  >Join Now</a
-                >
+                @auth
+                  <form action="" method="POST">
+                    <button class="btn btn-block btn-join-now  py-2" type="submit">Join Now</button>
+                  </form>
+                @endauth
+                @guest
+                  <a href="{{ route('login') }}" class="btn btn-block btn-join-now  py-2">Join Now</a>
+                @endguest
               </div>
             </div>
           </div>
