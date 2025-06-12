@@ -96,7 +96,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="card card-details card-right">
+              <div class="card card-details card-right-detail">
                 <h2>Members are going</h2>
                 <div class="members my-2">
                   <img src="{{ url('frontend/images/members.jpg') }}" alt="" class="w-75" />
@@ -126,7 +126,8 @@
               </div>
               <div class="join-container">
                 @auth
-                  <form action="" method="POST">
+                  <form action="{{ route('checkout-process', $item->id) }}" method="POST">
+                    @csrf
                     <button class="btn btn-block btn-join-now  py-2" type="submit">Join Now</button>
                   </form>
                 @endauth

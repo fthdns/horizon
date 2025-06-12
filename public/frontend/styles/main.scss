@@ -242,10 +242,6 @@ header{
             }
         }
 
-        h3{
-            font-size: 22px;
-        }
-
         .testimonial{
             font-weight: 200px;
             font-size: 24px;
@@ -337,6 +333,10 @@ header{
             font-size: 20px;
         }
 
+        .bank-item h2{
+            margin-bottom: 0px;
+        }
+
         p{
             font-size: 18px;
             color: #999999;
@@ -416,17 +416,25 @@ header{
         }
     }
 
-    // Checkout
     .card {
         background: #ffffff;
         border-radius: 15px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         padding: 30px;
       }
+
+      .card-right-detail{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
       
       .card-left h1 {
         font-size: 26px;
         margin-bottom: 5px;
+      }
+
+      .alert-success{
+        border-radius: 15px;
       }
       
       .trip-destination {
@@ -489,62 +497,54 @@ header{
         padding: 10px 20px;
         border-radius: 8px;
         cursor: pointer;
+
+        &:hover {
+          background: #395557;
+        }
       }
       
       .note {
         font-size: 12px;
         color: #999;
+        margin-bottom: 0px;
       }
-      
-      .card-right h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
+
+      .card-right p {
+        font-size: 16px;
       }
       
       .info-table {
         width: 100%;
       }
       
-      .info-table td {
-        padding: 8px 0;
-        font-size: 16px;
-      }
-      
       .text-right {
         text-align: right;
+        color: #777777;
+      }
+
+      .text-end {
+        text-align: right;
+        color: #777777;
       }
       
       .total-price .blue {
         color: #253839;
         font-weight: bold;
-        font-size: 22px;
       }
       
       .total-price .orange {
         color: #EB6440;
         font-weight: bold;
-        font-size: 22px;
-      }
-      
-      .payment-bank {
-        margin-top: 20px;
       }
       
       .bank-item {
         display: flex;
-        align-items: center;
         gap: 12px;
-        margin-bottom: 20px;
       }
       
       .bank-item img {
         width: 50px;
         height: 50px;
-      }
-      
-      .payment-text {
-        font-size: 14px;
-        color: #B4B4B4;
       }
       
       .btn-payment {
@@ -556,6 +556,11 @@ header{
         border-radius: 8px;
         text-decoration: none;
         margin-top: 20px;
+
+        &:hover{
+                background-color: #F08A5D;
+                color: #ffffff;
+        }
       }
       
       .cancel-booking {
